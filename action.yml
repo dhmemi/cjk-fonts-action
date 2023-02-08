@@ -19,8 +19,6 @@ runs:
         ${{ github.action_path }}/download.sh -f "${{ inputs.download-flag }}" || echo "Download completed"
         echo "::endgroup::"
       shell: bash
-    - run: ${{ github.action_path }}/copy.sh
-      shell: bash
     - run: |
         echo "::group::update fonts"
         ${{ github.action_path }}/install.sh
