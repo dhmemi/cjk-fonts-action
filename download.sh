@@ -13,5 +13,5 @@ wget -O SourceHanSansHWSC.zip ${flags} https://github.com/adobe-fonts/source-han
 unzip SourceHanSansHWSC.zip
 
 # Copy fonts to font directory
-cp -i OTF/SimplifiedChineseHW/SourceHanSansHWSC-Regular.otf $HOME/.fonts
-cp -i OTF/SimplifiedChineseHW/SourceHanSansHWSC-Bold.otf $HOME/.fonts
+cp -i OTF/SimplifiedChineseHW/SourceHanSansHWSC-Regular.otf $HOME/share/fonts/SourceHanSans
+cp -i OTF/SimplifiedChineseHW/SourceHanSansHWSC-Bold.otf $HOME/share/fonts/SourceHanSans
