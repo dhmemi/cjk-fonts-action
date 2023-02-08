@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm cns11643.zip
+rm SourceHanSansHWSC.zip
 rm -r Open_Data/

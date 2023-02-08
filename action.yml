@@ -1,20 +1,12 @@
-name: 'Install CNS11643 fonts'
-description: 'Install CNS11643 fonts'
-author: hms5232
+name: 'CJK-Fonts-Action'
+description: 'Install CJK font(s) (currently Source Han Sans) for GitHub Action.'
+author: hms5232, RisingInIris2017
 branding:
   icon: type
   color: yellow
 inputs:
-  kai:
-    description: 'Install 正楷體 or not'
-    required: false
-    default: 'true'
-  sung:
-    description: 'Install 正宋體 or not'
-    required: false
-    default: 'true'
   download-flag:
-    description: 'Add flag(s) when use wget'
+    description: 'Flag(s) of wget. '
     required: false
     default: '-nv'
 runs:
@@ -27,12 +19,8 @@ runs:
         ${{ github.action_path }}/download.sh -f "${{ inputs.download-flag }}" || echo "Download completed"
         echo "::endgroup::"
       shell: bash
-    - run: ${{ github.action_path }}/copy.sh kai
+    - run: ${{ github.action_path }}/copy.sh
       shell: bash
-      if:  ${{ inputs.kai == 'true' }}
-    - run: ${{ github.action_path }}/copy.sh sung
-      shell: bash
-      if:  ${{ inputs.sung == 'true' }}
     - run: |
         echo "::group::update fonts"
         ${{ github.action_path }}/install.sh

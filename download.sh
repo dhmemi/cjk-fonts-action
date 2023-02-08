@@ -9,12 +9,5 @@ while getopts 'f:' flag; do
   esac
 done
 
-wget -O cns11643.zip ${flags} http://www.cns11643.gov.tw/AIDB/Open_Data.zip
-
-# let's hash it~
-# but we don't have offical sha1sum file Orz
-hash=$(sha1sum cns11643.zip | cut -d ' ' -f 1)
-echo -e "\n The SHA1 value of downloaded file is \n"
-echo -e "\t>>>>> $hash <<<<<\n"
-
-unzip cns11643.zip
+wget -O SourceHanSansHWSC.zip ${flags} https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSansHWSC.zip
+unzip SourceHanSansHWSC.zip
