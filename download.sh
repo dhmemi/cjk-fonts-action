@@ -9,9 +9,8 @@ while getopts 'f:' flag; do
   esac
 done
 
-wget -O SourceHanSansHWSC.zip ${flags} https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSansHWSC.zip
-unzip SourceHanSansHWSC.zip
+wget -O 09_SourceHanSerifSC.zip ${flags} https://github.com/adobe-fonts/source-han-serif/releases/download/2.002R/09_SourceHanSerifSC.zip
+unzip 09_SourceHanSerifSC.zip
 
 # Copy fonts to font directory
-cp -i OTF/SimplifiedChineseHW/SourceHanSansHWSC-Regular.otf $HOME/share/fonts/SourceHanSans
-cp -i OTF/SimplifiedChineseHW/SourceHanSansHWSC-Bold.otf $HOME/share/fonts/SourceHanSans
+cp -i OTF/*.otf $HOME/share/fonts/SourceHanSerif
