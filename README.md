@@ -2,9 +2,9 @@
 
 修改自 [hms5232/install-CNS11643-fonts-action](https://github.com/hms5232/install-CNS11643-fonts-action) 项目。
 
-Github Action 自动安装中文字体方案。目前会安装 [Source Han Sans 字体 2.004R 版本](https://github.com/adobe-fonts/source-han-sans/releases/tag/2.004R) 中的
+Github Action 自动安装中文字体方案。目前会安装 [Source Han Serif 字体 2.002R 版本](https://github.com/adobe-fonts/source-han-serif/) 中的
 
-[Language Specific HW OTFs Simplified Chinese (简体中文)](https://github.com/adobe-fonts/source-han-sans/releases/tag/2.004R#:~:text=Language%20Specific%20HW%20OTFs%20Simplified%20Chinese%20(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+[Language Specific OTFs Simplified Chinese (简体中文)](https://github.com/adobe-fonts/source-han-serif/releases/download/2.002R/09_SourceHanSerifSC.zip)
 
 感谢这两个开源项目。
 
@@ -12,7 +12,7 @@ Github Action 自动安装中文字体方案。目前会安装 [Source Han Sans 
 
 ```yaml
 steps:
-  - uses: RisingInIris2017/cjk-fonts-action@v1  
+  - uses: dhmemi/cjk-fonts-action@v1  
 ```
 
 如需显示 action name:
@@ -20,7 +20,7 @@ steps:
 ```yaml
 steps:
   - name: Install CNS11643 fonts
-    uses: RisingInIris2017/cjk-fonts-action@v1  
+    uses: dhmemi/cjk-fonts-action@v1  
 ```
 
 与上游项目相同，本 action 也使用 [wget](https://www.gnu.org/software/wget/) 作为下载字体的工具，
@@ -29,7 +29,7 @@ steps:
 
 ```yaml
 steps:
-  - uses: RisingInIris2017/cjk-fonts-action@v1  
+  - uses: dhmemi/cjk-fonts-action@v1  
     with:
       download-flag: '-nv'
 ```
@@ -44,7 +44,7 @@ steps:
 
 本项目与上游项目一致地依据 [Apache 2.0 License](LICENSE) 开源。
 
-请依据 Source Han Sans [使用许可](https://github.com/adobe-fonts/source-han-sans/blob/master/LICENSE.txt) 使用本工具所下载的字体文件，
+请依据 Source Han Serif [使用许可](https://github.com/adobe-fonts/source-han-sans/blob/master/LICENSE.txt) 使用本工具所下载的字体文件，
 
-本项目不对用户进行的任何违反 Source Han Sans 使用许可的行为负责。
+本项目不对用户进行的任何违反 Source Han Serif 使用许可的行为负责。
 
